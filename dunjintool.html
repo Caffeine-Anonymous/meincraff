@@ -9,25 +9,19 @@
   
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
   <div class="Forms">
-	<form onsubmt="blockSubmit()">
+	<form id="postform" action="tools/backend.php" method="post" onsubmit="blockSubmit()">
 		X:<br>
-		<input type="text" id="x"><br>
+		<input type="text" id="ix" name="x"><br>
 		Y:<br>
-		<input type="text" id="y"><br>
+		<input type="text" id="iy" name="y"><br>
 		Z:<br>
-		<input type="text" id="z"><br>
+		<input type="text" id="iz" name="z"><br>
 		Data Value:<br>
-		<input type="text" id="datavalue"><br>
-		Player:<br>
-		<input type="text" id="player"><br>
+		<input type="text" id="datavalue" name="data"><br>
+		<input type="hidden" id="block" name="spawnstring">
+        Player:<br>
+		<input type="text" id="player" name="user"><br>
 		<input type="submit" value="MATERALIZE">
-	</form>
-	<form id="postform" action="tools/backend.php" method="post">
-		<input type="hidden" id="hx" name="x">
-		<input type="hidden" id="hy" name="y">
-		<input type="hidden" id="hz" name="z">
-		<input type="hidden" id="hdataval" name="spawnstring">
-		<input type="hidden" id="hplayer" name="user">
 	</form>
   </div>
   </body>
