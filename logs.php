@@ -4,7 +4,7 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>minecraft Log Reader</title>
+<title>Minecraft Log Reader</title>
 </head>
 <body>
 <h1>
@@ -35,7 +35,7 @@ echo 'Year: <input type="text" value="'.$year.'" name="year"/>';
 </p>
 </form>
 <hr />
-<p id="log">
+<pre id="log">
 <?php
 date_default_timezone_set('America/New_York');
 $output = "Please Select a Date";
@@ -53,9 +53,9 @@ if(!empty($_POST["day"])){
         $output .= shell_exec("ssh minecraft@notch 'cat logs/latest.log'");
     }
 }
-    echo '<pre>'.$output.'</pre>';
+    echo $output;
 ?>
-</p>
+</pre>
 
 <div id="footer">
     <a href="http://validator.w3.org/check?uri=referer">
