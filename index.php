@@ -22,38 +22,43 @@
     [<a href="http://mc.primis.org:25566">Dynmap</a>]
     [<a href="http://tasteyserv.wikia.com">Wiki</a>]
     [<a href="#links">External Links</a>]
-    [<a href="logs">Server Logs</a>]
+    [<a href="tools">Admin Tools</a>]
+    [<a href="tos">TOS</a>]
     </p>
 
 
 <h2> Users Currently Online </h2>
 <?php
-$output = shell_exec("ssh minecraft@notch '/usr/local/etc/rc.d/minecraft command list'");
-$users = array();
-$output = explode(PHP_EOL, $output);
-$sentinel = 1; // Don't feel like using real programming here.
-foreach ($output as $str) {
-    if($sentinel > 1) {
-        $str = substr(strrchr($str,':'), 1);
-        $users = array_merge($users, explode(", ",$str));
-    }
-    $sentinel++;
+// MCStatus-php by martok (github: martok/MCStatus-php)
+require_once("lib/MCStatus.php");
+try {
+    $mcs = new MCStatus('notch',25565); // Server instance
+    $data = $mcs->getFull();    // Query Server. QUERY MUST BE ENABLED SERVER SIDE
+    $users = $data['players'];  // Get just the players from the data
+} 
+catch (Exception $e) {
+    echo "<pre>".$e->getMessage()."</pre>\n";
 }
-echo "<table id='users'>\n\t<tr>\n";
-foreach ($users as $user) {
-    $user = trim($user, " ,");
-    if(!empty($user)){
-        echo "\t\t<td><img alt='".$user."' src='http://minotar.net/helm/".$user."' height='45' width='45'/></td>"."\n";
+
+if(!empty($users)) {
+    echo "<table>\n\t<tr>\n"; // Start the table only if users online
+    
+    foreach ($users as $user) { // Headshots from minotar.net :D
+        echo "\t\t<td><img style='margin: 0 auto;' alt='".
+        $user."' src='http://minotar.net/helm/".$user.
+        "' height='45' width='45'/></td>"."\n";
     }
-}
-echo "\t</tr>\n\t<tr>\n";
-foreach ($users as $user) {
-    $user = trim($user, " ,");
-    if(!empty($user)){
-        echo "\t\t<td>".$user."</td>\n";
+    
+    echo "\t</tr>\n\t<tr>\n"; // End heads, start names.
+    
+    foreach ($users as $user) { // Names
+        echo "\t\t<td style='text-align:center'>".$user."</td>\n";
     }
+
+    echo "\t</tr>\n</table>\n"; // End names, end table
+} else {
+    echo "<p>There is nobody online!</p>\n"; // Default case if no one online 
 }
-echo "\t</tr>\n</table>\n";
 ?>
 <hr />
     <h2 id="about">About</h2>
