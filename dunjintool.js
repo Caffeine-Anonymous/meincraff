@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	$('form').submit(function(){
+	$('form').submit(function()){
 		document.getElementById("hx").value = document.getElementById("x").value;
 		document.getElementById("hy").value = document.getElementById("y").value;
 		document.getElementById("hz").value = document.getElementById("z").value;
