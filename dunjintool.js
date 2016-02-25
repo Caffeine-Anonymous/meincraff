@@ -1,11 +1,11 @@
 $(document).ready(function(){
 	$('form').submit(function(){
-		getUrlVars();
-		document.getElementById("hx").value = vars[0];
-		document.getElementById("hy").value = vars[1];
-		document.getElementById("hz").value = vars[2];
-		document.getElementById("hdataval").value = vars[3];
-		document.getElementById("hplayer").value = vars[4];
+		var formVal = getUrlVars()["formVal"];
+		document.getElementById("hx").value = formVal[0];
+		document.getElementById("hy").value = formVal[1];
+		document.getElementById("hz").value = formVal[2];
+		document.getElementById("hdataval").value = formVal[3];
+		document.getElementById("hplayer").value = formVal[4];
 		document.getElementById("postform").submit();
 		})
 	})
