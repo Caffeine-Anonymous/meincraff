@@ -8,12 +8,6 @@ $spawnstring = $_POST["spawnstring"];
 $user = $_POST["user"];
 
 if (empty($_POST["user"])) {
-    if (!empty($_POST["cblock"])){
-        $spawnstring = 'command_block 0 replace {Command:"setblock '.$x." ".$y." ".$z." ".$spawnstring.'",TrackOutput:0}';
-        $x=$_POST["cX"];
-        $y=$_POST["cY"];
-        $z=$_POST["cZ"];
-    }
     $command = "setblock ".$x." ".$y." ".$z." ".$spawnstring;
 } else {
     $command = "give ".$user." ".$spawnstring;
