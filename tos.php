@@ -160,10 +160,10 @@
 <form action="submit-tos.php" method="post">
 <p id="submission">
 <input type="checkbox" name="agree" value="yes">
-I agree to the Terms of Service above and that my information is correct.<br\>
-Username: <input type="">
-
-<input type="submit" value="Submit">
+I agree to the Terms of Service above and that my information is correct.<br/>
+Username: <input type="text" name="username"/><br/>
+Email: <input type="text" name="email"/><br/>
+<input type="submit" value="Submit"><br/>
 </p>
 </form>
 <hr />
