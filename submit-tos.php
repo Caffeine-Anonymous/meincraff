@@ -22,9 +22,11 @@ if(isset($_POST['agree'], $_POST['username'], $_POST['email'])) {
         if(preg_match('/[^a-z_0-9]/i', $user)) {
             echo "You did not enter a valid username!\n";
         } else {
-            $message = "User ".$user." Registerd on the server with the email ".
+            $message = "User ".$user." Registered on the server with the email ".
             $_POST['email'];
-            mail("supportprimis@gmail.com","User Registered",$message);
+            mail("supportprimis@gmail.com","User Registered",$message,
+            "From: noreply@primis.org\r\nCC: tasteyfire@gmail.com"
+            );
             shell_exec("ssh minecraft@notch '/usr/local/etc/rc.d/minecraft command ".
             "pex user ".$user." group set member'");
             echo "Thank you for registering, Welcome to Tasteyserv, ".$user;
