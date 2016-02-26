@@ -44,7 +44,7 @@ if(!empty($users)) {
     echo "<table>\n\t<tr>\n"; // Start the table only if users online
     
     foreach ($users as $user) { // Headshots from minotar.net :D
-        echo "\t\t<td><img style='margin: 0 auto;' alt='".
+        echo "\t\t<td style='text-align:center'><img alt='".
         $user."' src='http://minotar.net/helm/".$user.
         "' height='45' width='45'/></td>"."\n";
     }
