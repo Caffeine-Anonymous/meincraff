@@ -107,11 +107,6 @@ if(!empty($users)) {
     </li>
 
     <li>
-        <a href="http://dev.bukkit.org/bukkit-plugins/mobmanager">MobManager</a>
-        &ndash; Prevents the spawning of mobs in the overworld.
-    </li>
-
-    <li>
         <a href="http://dev.bukkit.org/bukkit-plugins/multiverse-core">
         Multiverse</a> &ndash; Allows multiple dimensions. 
         See <a href="#worlds">Worlds</a> For more information.
@@ -144,6 +139,7 @@ if(!empty($users)) {
 
     <li>
         <a href="http://dev.bukkit.org/bukkit-plugins/dynmap/">Dynmap</a> &ndash;
+        <em>Dynmap is currently down due to 1.9 compatibility issues.</em>
         Dynamically updating world map. <a href="http://mc.primis.org:25566"> 
         See our map here</a>.
     </li>
@@ -206,7 +202,18 @@ if(!empty($users)) {
 
     <h2 id="news">News</h2>
     <dl>
-
+    <dt>March 1<sup>st</sup>, 2016</dt>
+    <dd>
+    The site has been updated! We now have an online user listing as well as
+    an enumerated TOS with user registration attached. On the news of the
+    server itself, we've upgraded to spigot 1.9 today! Unfortunately, spigot
+    has gotten rid of some of the 1.7 API's requiring plugin updates. For some
+    plugins we have there are simply no replacements, and others, we'll just
+    have to wait out and see. As of right now, we've decided to remove
+    MobManager, and Dynmap is currently broken due to compatibility issues.
+    hopefully dynmap will be updated soon so we can use it again. In the
+    meantime, enjoy the 1.9 update!
+    </dd>
     <dt>December 2<sup>nd</sup>, 2015</dt>
     <dd>
     ...and we're back!<br />
