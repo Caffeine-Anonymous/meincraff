@@ -1,0 +1,10 @@
+# Sensitive Data in config
+/config/config.php
+
+# Custom Pages
+about.html
+navbar.html
+
+# All news except for default
+/news/*
+!/news/2000-01-01.html

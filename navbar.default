@@ -1,0 +1,7 @@
+<!-- This is a default Nav bar, to use it, rename to navbar.html-->
+[<a href="/#about">About</a>]
+[<a href="/#plugins">Plugins</a>]
+[<a href="/#worlds">Worlds</a>]
+[<a href="/#news">News</a>]
+[<a href="/#links">External Links</a>]
+[<a href="tools">Admin Tools</a>]

@@ -1,0 +1,23 @@
+<?php
+/*
+This php file should have all the variables you need for your
+server only.
+This is the example file:
+To use this as a template, rename to "config.php"
+*/
+
+// The Name of your Server
+$server_name='My Server';
+
+// Your minecraft server address and port
+$server_ip='localhost';
+$server_port=25565;
+// Your Rcon port 
+// You must enable rcon on your server and the port accessable!
+$rcon_port=25575;
+
+// Your Rcon password
+$rcon_pass='password';
+
+// Votey server ID via minecraftservers.net (Comment out if unused)
+//$votey_id=;
