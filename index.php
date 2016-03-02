@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <?php require("config/config.php"); ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
@@ -7,19 +8,19 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title> <?=$server_name?> </title>
+<title> <?php=$server_name?> </title>
 </head>
     <body>
     <?php if(isset($votey_id)): ?>
     <p id="votey">
-        <a href="http://minecraftservers.net/server/<?=$votey_id?>/">
-        <img src="http://minecraftservers.net/status/server_<?=$votey_id?>.png"
+        <a href="http://minecraftservers.net/server/<?php=$votey_id?>/">
+        <img src="http://minecraftservers.net/status/server_<?php=$votey_id?>.png"
         alt="Vote for our server!" style="float: right" />
         </a>
     </p>
     <?php endif; ?>
 
-    <h1> <?=$server_name?> </h1>
+    <h1> <?php=$server_name?> </h1>
     <p id="navbar">
         <?php include("navbar.html")?>
     </p>
@@ -45,15 +46,15 @@ catch (Exception $e) {
 <tr>
 <?php foreach ($users as $user): ?>
     <td style='text-align:center'>
-        <!--Thank you to minotar for your awesome head API-->
-        <img src="http://minotar.net/helm/<?=$user?>/45" alt="<?=$user?>" />
+    <!--Thank you to minotar for your awesome head API-->
+    <img src="http://minotar.net/helm/<?php=$user?>/45" alt="<?php=$user?>"/>
     </td>
 <?php endforeach; ?>
 </tr>
 
 <tr>
 <?php foreach ($users as $user): ?>
-    <td style='text-align:center'> <?=$user?> </td>
+    <td style='text-align:center'> <?php=$user?> </td>
 <?php endforeach; ?>
 </tr>
 </table>
